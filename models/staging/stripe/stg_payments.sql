@@ -1,7 +1,7 @@
 with payments as(
     select
-    id as USER_ID,
-    orderid as Order_ID,
+    id as customer_id,
+    orderid as order_id,
     Amount as Amount,status
     from raw.stripe.payment
 )
