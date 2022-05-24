@@ -2,10 +2,6 @@ with customers as(
     select * from {{ref('stg_customers')}}
 ),
 
-orders as (
-    select * from {{ref('stg_orders')}}
-),
-
 payments as (
     select * from {{(ref('fct_orders'))}}
 ),
@@ -19,7 +15,7 @@ customer_orders_date_and_count as (
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders
 
-    from orders
+    from payments
 
     group by 1
 
