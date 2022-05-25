@@ -36,5 +36,8 @@ models:
             - relationships:
                 to: ref('stg_customers')
                 field: customer_id
+<<<<<<< HEAD
         - name: order_date
           description: On which day customer placed order
+=======
+>>>>>>> 896e8d2071576ac16215f0e25ee58d50c88c5497
