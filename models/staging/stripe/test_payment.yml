@@ -1,0 +1,17 @@
+version: 2
+
+models:
+    - name: stg_payments
+      description: payment table
+      columns:
+        - name: payment_id
+          description: primary key of payment table (stg_payments)
+          tests:
+            - unique
+            - not_null
+        - name: status
+          description: "{{doc('payment_status')}}"
+        - name: Amount
+          description: Amount paid for particular order
+        - name: order_id
+          description: Foreign key to stg_order.order_id
