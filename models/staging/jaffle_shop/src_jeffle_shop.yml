@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: jaffle_shop
     description: A clone of postgres application database
-    database: raw
+    database: raw_jinja
     schema: jaffle_shop
     tables:
       - name: customers
