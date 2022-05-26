@@ -8,7 +8,7 @@ pivoted as (
     select
         order_id,
         {% for method in payments_methods %}
-        sum(case when payment_method='{{method}}' then amount else 0 end) as {{method}}_transfer
+        sum(case when payment_method='{{method}}' then amount else 0 end) as {{method}}_amount
         {% if not loop.last %}
         ,
         {%endif%}
